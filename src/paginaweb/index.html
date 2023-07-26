@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" 
     rel="stylesheet">
+    <script type="module"  src="./js/fetchCurrentPosition.js"></script>
 </head>
 <body>
     <video src="https://assets.mixkit.co/videos/preview/mixkit-video-of-the-earth-slowly-spinning-on-its-axis-29351-large.mp4" autoplay="true" muted="true" loop="true"></video>
@@ -38,9 +39,10 @@
     <main>
         <center>
             <nav>
-                <p>Salida 1</p><!--Alberto, Kevin o chicos backend-->
-                <p>Salida 2</p>
-                <p>Salida 3</p>
+                <li><span>Status:</span> <span id="message"></span></li>
+                <li><span>Timestamp:</span> <span id="timestamp"></span></li>
+                <li><span>Latitude:</span> <span id="latitude"></span></li>
+                <li><span>Longitude:</span> <span id="longitude"></span></li>
             </nav>
         </center>
         

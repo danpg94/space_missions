@@ -7,8 +7,9 @@ Daniel Palma Garcia
 Gabriel Esqueda Guzman
 Manuel Navarro Valadez
 Ronaldo Alejandor Tapia de la Cruz
-Luis Angel Gernal
+Luis Angel Bernal
 Kevin Brayan Carbajal Sanchez
+Josué Abraham Vázquez Martínez
 
 ## Week 1
 

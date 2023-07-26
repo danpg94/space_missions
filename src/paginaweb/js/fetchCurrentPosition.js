@@ -44,9 +44,16 @@ function setDefaultStatus() {
  */
 function setUpdatedStatus({ message, timestamp, latitude, longitude }) {
   console.log(message);
+  //Convertimos el timestamp a un objeto Date (multiplicamos por 1000 para que el timestamp este en milisegundos)
+  var dateFormat = new Date(timestamp * 1000)
   //innerText es la propiedad que permite modificar el texto de un elemento html mediante js
   statusSpan.innerText = message;
-  timestampSpan.innerText = timestamp;
+  timestampSpan.innerText = dateFormat.getDay() + "/" 
+                          + dateFormat.getMonth() + "/" 
+                          + dateFormat.getFullYear() + "  "
+                          + dateFormat.getHours() + ":" 
+                          + dateFormat.getMinutes() + ":"
+                          + dateFormat.getSeconds();
   latitudeSpan.innerText = latitude;
   longitudeSpan.innerText = longitude;
 }

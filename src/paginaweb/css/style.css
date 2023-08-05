@@ -12,10 +12,10 @@ body {
   /* 1 rem = 10 px*/
   font-family: 'Krub', sans-serif;
   /* Estilo del cursor personalizado (imagen de alien) */
-  cursor: url('../icons/cursor_defualt.png'), auto;
+  cursor: url('../img/icons/cursor_defualt.png'), auto;
   }
   a {
-      cursor: url('../icons/cursor_hand.png'), auto;
+      cursor: url('../img/icons/cursor_hand.png'), auto;
 }
 
 

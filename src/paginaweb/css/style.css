@@ -45,21 +45,21 @@ footer {
   margin: .5rem;
 }
 
-nav {
+.nav_Menu {
   display: flex;
   justify-content: center;
   top: 1.5rem;
   position: relative;
 }
 
-nav ul {
+.nav_ul_Menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav li {
+.nav_li_Menu {
   margin: 0 1rem;
 }
 
@@ -101,4 +101,31 @@ video {
 
 .container-contacts {
   max-width: 80rem;
+}
+
+.cuadro {
+  color: #ffffff;
+  margin-top: 6rem;
+  margin-right: 50rem;
+  margin-bottom: 5rem;
+  margin-left: 50rem;
+
+  text-align: center;
+  background-color: #181818;
+  border: 2px solid #ffffff;
+  padding: 1rem; /* Agregamos relleno al cuadro */
+}
+
+/* Estilos para la lista dentro de .cuadro */
+.cuadro ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Eliminamos el margen de la lista */
+}
+
+/* Añade estilos solo a los li específicos dentro de .cuadro */
+.cuadro li:not(:first-child) {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  
 }

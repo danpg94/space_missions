@@ -1,0 +1,26 @@
+.cuadro {
+    color: #ffffff;
+    margin-top: 6rem;
+    margin-right: 50rem;
+    margin-bottom: auto;
+    margin-left: 50rem;
+  
+    text-align: center;
+    background-color: #181818;
+    border: 2px solid #ffffff;
+    padding: 1rem; /* Agregamos relleno al cuadro */
+  }
+  
+  /* Estilos para la lista dentro de .cuadro */
+  .cuadro ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Eliminamos el margen de la lista */
+  }
+  
+  /* Añade estilos solo a los li específicos dentro de .cuadro */
+  .cuadro li:not(:first-child) {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    
+  }

@@ -51,21 +51,21 @@ footer {
   margin: .5rem;
 }
 
-nav {
+.nav_Menu {
   display: flex;
   justify-content: center;
   top: 1.5rem;
   position: relative;
 }
 
-nav ul {
+.nav_ul_Menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav li {
+.nav_li_Menu {
   margin: 0 1rem;
 }
 
@@ -109,3 +109,7 @@ video {
   max-width: 80rem;
 }
 
+.title {
+  font-size: 24px; 
+  font-weight: bold;
+}

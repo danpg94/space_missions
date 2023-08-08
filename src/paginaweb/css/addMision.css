@@ -1,12 +1,16 @@
 .form-mision {
     max-width: 700px;
-    padding: 15px;
+    width: 70%;
+    height: auto;
+    margin: 5rem auto;
     background-color: #00000060;
     color: #ffffff;
-    border-color: #ffffff;
+    border: 0.1rem solid #ffffff;
     border-radius: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 2;
+    padding: 20px;
   }
   
   .form-control{
@@ -16,8 +20,8 @@
     border-color: #ffffff;
     box-shadow: 0 0 0 0.25rem rgb(33 46 70 / 25%);
     transition-timing-function: ease-out;
-      transition-duration: .5s;
-      transition-property: all;
+    transition-duration: .5s;
+    transition-property: all;
     caret-color: #ffffff;
     font-size: 12px;
   }
@@ -86,10 +90,5 @@
     max-width: 180px; 
     width: 100%; 
     height: auto;
-  }
-  
-  .title {
-    font-size: 24px; 
-    font-weight: bold;
   }
   

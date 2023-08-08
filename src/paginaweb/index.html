@@ -8,6 +8,8 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/styleMenu.css" as="style">
+    <link rel="stylesheet" href="css/styleMenu.css">
     <title>Space Missions</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -25,25 +27,29 @@
         </h1>
     </header>
 
-    <div class="Menú"><!--El css se lo rifa Ronaldo semana del 24-->
+    <div><!--El css se lo rifa Ronaldo semana del 24-->
         <nav>
-            <ul>
+            <ul class="nav_ul_Menu nav_li_Menu nav_Menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="html/contacto.html">Contacto</a></li><!--Abraham-->
                 <li><a href="html/addMision.html">Añadir Misión</a></li>
                 <li><a href="html/spaceViews.html">Ver Misiones</a></li>
                 <li><a href="#">Iniciar Sesión</a></li><!--Luis-->
-                <li><a href="#">Lupa</a></li><!--Agregar una lupa -->
+                <li><a href="#"><img src="img/Lupa.png" alt="Lupa" style="width: 20px; height: 20px;"></a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <nav>
-            <li><span>Status:</span> <span id="message"></span></li>
-            <li><span>Timestamp:</span> <span id="timestamp"></span></li>
-            <li><span>Latitude:</span> <span id="latitude"></span></li>
-            <li><span>Longitude:</span> <span id="longitude"></span></li>
+        <nav class="cuadro text-center">
+            <h3 class="h3 pt-3 mt-4 mb-3 fw-normal text-center title">Hola Apolo</h3>
+            <div class="mt-5 mb-4">
+                <h3>Te mando tus datos de viajero espacial</h3>
+                <li>Status: <span id="message"></span></li>
+                <li>Timestamp: <span id="timestamp"></span></li>
+                <li>Latitude: <span id="latitude"></span></li>
+                <li>Longitude: <span id="longitude"></span></li>
+            </div>
         </nav>
     </main>
 

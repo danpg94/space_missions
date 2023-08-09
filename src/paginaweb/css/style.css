@@ -12,10 +12,10 @@ body {
   /* 1 rem = 10 px*/
   font-family: 'Krub', sans-serif;
   /* Estilo del cursor personalizado (imagen de alien) */
-  cursor: url('../icons/cursor_defualt.png'), auto;
+  cursor: url('../img/icons/cursor_defualt.png'), auto;
   }
   a {
-      cursor: url('../icons/cursor_hand.png'), auto;
+      cursor: url('../img/icons/cursor_hand.png'), auto;
 }
 
 
@@ -51,21 +51,21 @@ footer {
   margin: .5rem;
 }
 
-nav {
+.nav_Menu {
   display: flex;
   justify-content: center;
   top: 1.5rem;
   position: relative;
 }
 
-nav ul {
+.nav_ul_Menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav li {
+.nav_li_Menu {
   margin: 0 1rem;
 }
 
@@ -109,3 +109,7 @@ video {
   max-width: 80rem;
 }
 
+.title {
+  font-size: 24px; 
+  font-weight: bold;
+}

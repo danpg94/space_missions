@@ -67,3 +67,32 @@ Week 3: LAMP Stack and Docker
 - Finish our database structure
 - Create an automated scrpit to configure our stack in a Docker container
 - Create a series of tests for deployment
+
+## Week 4
+
+### Activities
+
+ IAAS/SAAS/PAAS and Terraform
+
+1. Explore different IAAS/SAAS/PAAS platforms (e.g., AWS, Azure, Google Cloud).
+
+2. Task: Choose a platform and provision a virtual machine (IAAS) or use a managed service (SAAS/PAAS) to host the web application.
+
+3. Configure the necessary network settings (e.g., security groups, firewall rules) to allow access to the web application.
+
+4. Collaboratively document the deployment process and configurations.
+
+### Standup Notes
+- Dockerfile created, step by step doc created
+- Updated our frontend
+- Backend and database implemented in django
+- Had issues with a branch merge
+
+### TODOs 
+- Create ANSIBLE yml
+- Restructure 
+- Finish up our frontend
+- Ramp up everybody on how to deploy to Azure
+- Create wiki page for documentation
+- ???
+- PROFIT!!

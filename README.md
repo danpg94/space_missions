@@ -39,3 +39,31 @@ Week 2: Networking and Web Scripting
 
 - Created specific branch for this week's updates
 - Assigned roles to team members
+
+## Week 3
+
+### Activities
+
+Week 3: LAMP Stack and Docker
+
+1. Set up a local LAMP stack environment using Docker containers.
+
+2. Task: Create a simple web application that allows users to view and submit space mission ideas.
+
+3. Implement a basic MySQL database to store the submitted mission ideas.
+
+4. Test the web application locally to ensure it works within the LAMP stack environment.
+
+### Standup Notes
+- Making daily meetings to review WSL and Docker installation processes
+- Defined our stack (LAMP [LINUX-APACHE-MySQL-Python])
+- Created a schema for our database
+- Added new pages to our site (Add and View Space Missions)
+- Backend team ramping up on Django
+
+### TODOs
+- Figure out how to distribute next week's tasks
+- Establish our front to back API (JS and Python) 
+- Finish our database structure
+- Create an automated scrpit to configure our stack in a Docker container
+- Create a series of tests for deployment

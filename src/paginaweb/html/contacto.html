@@ -8,6 +8,8 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preload" href="../css/contacts.css" as="style">
+    <link rel="stylesheet" href="../css/contacts.css">
     <title>Space Missions</title>
     <link rel="preload" href="../css/normalize.css" as="style">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -24,7 +26,7 @@
         </h1>
     </header>
 
-    <div class="Menú">
+    <div class="nav_ul_Menu nav_li_Menu nav_Menu">
         <nav class="Contenedor">
             <nav class="Contenedor">
                 <a href="../index.html">Inicio</a>
@@ -32,60 +34,119 @@
                 <a href="addMision.html">Añadir Misión</a>
                 <a href="spaceViews.html">Ver Misiones</a>
                 <a href="#">Iniciar Sesión</a>
-                <a href="#">Lupa</a>
+                <a href="#"><img src="../img/Lupa.png" alt="Lupa" style="width: 20px; height: 20px;"></a>
             </nav>
         </nav>
     </div>
 
     <main>
-        <h2 class="text-white mt-5" style="text-align: center;">Conoce a nuestro equipo</h2>
         <div class="container container-contacts mb-5">
-            <table class="table table-striped table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Contact (Github Profile)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gabriel Esqueda Guzmán</td>
-                        <td><a href="https://github.com/Gabo-Puck" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Manuel Navarro Valadez</td>
-                        <td><a href="https://github.com/molki3" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Daniel Palma García</td>
-                        <td><a href="https://github.com/danpg94" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Luis Angel Bernal Perez</td>
-                        <td><a href="https://github.com/ThirtforBep" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ronaldo Alejandro Tapia de la Cruz</td>
-                        <td><a href="https://github.com/RonsIA" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Alberto Beltran</td>
-                        <td><a href="https://github.com/ElBetoso" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Kevin Bryan Carbajal Sánchez</td>
-                        <td><a href="https://github.com/kevin-bcs" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Josué Abraham Vázquez Martínez</td>
-                        <td><a href="https://github.com/Hsm49" target="_blank">Github Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td>Luis Alferez</td>
-                        <td><a href="https://github.com/LurchingDart" target="_blank">Github Profile</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2 class="h3 pt-3 mt-4 mb-5 fw-normal text-center title">Conoce a nuestro equipo</h2>
+            <div class="mb-5">
+                <div class="text-center">
+                    <div class="row">
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/46697843?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Daniel Palma García</h3>
+                                    <p>Scrum Master & Back-End Developer</p>
+                                    <p><a href="https://github.com/danpg94" class="btn btn-primary" target="_blank" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/108484382?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Gabriel Esqueda Guzmán</h3>
+                                    <p>Back-End Developer</p>
+                                    <p><a href="https://github.com/Gabo-Puck" class="btn btn-primary" target="_blank" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/54428156?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Manuel Navarro Valadez</h3>
+                                    <p>Back-End Developer</p>
+                                    <p><a href="https://github.com/molki3" class="btn btn-primary" target="_blank" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/101238265?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Luis Angel Bernal Perez</h3>
+                                    <p>Front-End Developer</p>
+                                    <p><a href="https://github.com/ThirtforBep" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/48371907?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Ronaldo Alejandro Tapia de la Cruz</h3>
+                                    <p>Front-End Developer</p>
+                                    <p><a href="https://github.com/RonsIA" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/100962574?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Josué Abraham Vázquez Martínez</h3>
+                                    <p>Front-End Developer</p>
+                                    <p><a href="https://github.com/Hsm49" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/108848743?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Alberto Beltran</h3>
+                                    <p>Back-End Developer</p>
+                                    <p><a href="https://github.com/ElBetoso" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/129092229?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Kevin Bryan Carbajal Sánchez</h3>
+                                    <p>Back-End Developer</p>
+                                    <p><a href="https://github.com/kevin-bcs" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-sm-4 mb-5">
+                            <div class="thumbnail">
+                                <img src="https://avatars.githubusercontent.com/u/81345570?v=4" alt="Foto de Desarrollador" class="img-circle mb-3">
+                                <div class="caption">
+                                    <h3>Luis Alferez</h3>
+                                    <p></p>
+                                    <p><a href="https://github.com/LurchingDart" target="_blank" class="btn btn-primary" role="button">Ver en GitHub</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 

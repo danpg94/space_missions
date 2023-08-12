@@ -2,17 +2,62 @@
 
 {% block content %}
 
+<head>
+    {% load static %}
+    <link rel="preload" href="{% static 'css/addMision.css' %}" as="style">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/addMision.css' %}">
+</head>
+
     <main>
-        <h1>Crear Misión Espacial</h1>
-        {{error}}
-        <form action="" method="POST">
-            {% csrf_token %}
-            <label for="title">Titulo</label>
-            <input type="text" name="title" required>
-            <label for="description">descripcion</label>
-            <textarea name="description" cols="30" rows="10" required></textarea>
-            <button>Guardar</button>
-        </form>
+
+        <div class="container-fluid mb-5 mt-5 position-relative">
+            <div class="form-mision w-100 mx-auto">
+                <div class="image-container">
+                    <img src="{% static 'img/rocket.png' %}" id="f-rocket" alt="Rocket">
+                </div>
+
+                <div class="form-header p-4">
+                    <h1 class="h3 pt-3 mt-4 mb-3 fw-normal text-center title">
+                        Crear Misión Espacial
+                    </h1>
+                </div>
+                {{error}}
+
+                <div class="form-body p-3">
+                    <div class="mb-3">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-5">
+                                <label for="title" class="form-label">Nombre de la misión</label>
+                                <input type="text" name="title" class="form-control"  id="title" placeholder="Nombre" required>
+                            </div>
+                            
+                            <div class="mb-5">
+
+                                <label for="description" class="form-label">Descripción de la misión</label>
+                                <textarea name="description" class="form-control" cols="30" rows="10" id="description" placeholder="Descripción" required></textarea>
+                            </div>
+
+                            <div class="container-fluid mt-5">
+                                <div class="row text-center mt-5">
+                                    <div class="col mb-4">
+                                        <button type="submit" class="btn btn-sumbit w-50">Guardar</button>
+                                    </div>
+
+                                    <div class="col mb-4">
+                                        <a href="{% url 'home' %}" class="btn btn-exit w-50">Salir</a> 
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </main>
 
     <footer>

@@ -1,13 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<head>
+    {% load static %}
+    <link rel="preload" href="{% static 'css/styleMenu.css' %}" as="style">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styleMenu.css' %}">
+</head>
     <main>
-        <nav>
-            <li><span>Status:</span> <span id="message"></span></li>
-            <li><span>Timestamp:</span> <span id="timestamp"></span></li>
-            <li><span>Latitude:</span> <span id="latitude"></span></li>
-            <li><span>Longitude:</span> <span id="longitude"></span></li>
-        </nav>
+        <div class="cuadro text-center">
+            <h3 class="h3 pt-3 mt-4 mb-3 fw-normal text-center title">Hola Apolo</h3>
+            <div class="mt-5 mb-4">
+                <h3>Te mando tus datos de viajero espacial</h3>
+                <li>Status: <span id="message"></span></li>
+                <li>Timestamp: <span id="timestamp"></span></li>
+                <li>Latitude: <span id="latitude"></span></li>
+                <li>Longitude: <span id="longitude"></span></li>
+            </div>
+        </div>
     </main>
 
     <footer>

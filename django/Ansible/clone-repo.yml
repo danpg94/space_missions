@@ -46,30 +46,29 @@
       tags: clone_repo
 
     - name: Change to project directory
-      command: cd /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+      shell: cd /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
       args:
         chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
       tags: configure_container
 
     - name: Switch to "main" branch
-      command: git checkout main
+      shell: git checkout main
       args:
         chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
       tags: configure_container
 
     - name: Change to Django directory
-      command: cd django
+      shell: cd /home/ElBetoso/repo/space_missions/django
       args:
         chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
       tags: configure_container
 
     - name: Build Docker container
-      command: sudo docker build --build-arg ALLOWED_HOST_PARAM=20.106.215.197 . -t repo/space_missions
+      shell: sudo docker build --build-arg ALLOWED_HOST_PARAM=20.106.215.197 . -t test/space_missions # Change IP to your virtual machine's IP and The route (test/space_missions) to your route
       args:
         chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
       tags: configure_container
 
     - name: Run Docker container
-      command: sudo docker run --name=space_missions -d -p 80:80 repo/space_missions
+      shell: sudo docker run --name=space_missions -d -p 80:80 test/space_missions # Change The route (test/space_missions) to your route
       tags: configure_container
-      

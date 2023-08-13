@@ -37,11 +37,12 @@
 
 - name: Clone repository and run Docker container
   hosts: all
+  become: yes
   tasks:
     - name: Clone repository
       git:
         repo: https://github.com/danpg94/space_missions.git
-        dest: /home/ElBetoso/repo # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
+        dest: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
       tags: clone_repo
 
     - name: Change to project directory
@@ -71,3 +72,4 @@
     - name: Run Docker container
       command: sudo docker run --name=space_missions -d -p 80:80 repo/space_missions
       tags: configure_container
+      

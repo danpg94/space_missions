@@ -26,12 +26,15 @@
         autoplay="true" muted="true" loop="true"></video>
     <header>
         <h1 class="Titulo">
-            Bienvenido a Space Missions,
             {% if user.is_authenticated %}
+                ¡Bienvenido a Space Missions,
                 <span style="color: teal;">
                     {{user.username}}
-                </span>
-                
+                </span>!
+
+            {% else %}
+            ¡Bienvenido a Space Missions!
+
             {% endif %}
         </h1>
 

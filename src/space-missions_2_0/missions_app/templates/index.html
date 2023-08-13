@@ -10,9 +10,16 @@
 </head>
     <main>
         <div class="cuadro text-center">
-            <h3 class="h3 pt-3 mt-4 mb-3 fw-normal text-center title">Hola Apolo</h3>
+            <h3 class="h3 pt-3 mt-4 mb-3 fw-bold text-center title">
+            {% if user.is_authenticated %}
+                Hola {{user.username}}
+
+            {% else %}
+                Hola viajero
+            {% endif %}
+            </h3>
             <div class="mt-5 mb-4">
-                <h3>Te mando tus datos de viajero espacial</h3>
+                <h3>Te mando los datos de la estación espacial</h3>
                 <li>Status: <span id="message"></span></li>
                 <li>Timestamp: <span id="timestamp"></span></li>
                 <li>Latitude: <span id="latitude"></span></li>

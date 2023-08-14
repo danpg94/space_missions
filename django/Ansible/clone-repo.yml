@@ -1,0 +1,74 @@
+---
+- name: Install Docker on Ubuntu
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+
+    - name: Install necessary packages for Docker
+      apt:
+        name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
+      tags: docker_dependencies
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+      tags: docker_dependencies
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+        state: present
+      tags: docker_dependencies
+
+    - name: Update package cache after adding repository
+      apt:
+        update_cache: yes
+      tags: docker_dependencies
+
+    - name: Install Docker
+      apt:
+        name: docker-ce
+        state: latest
+      tags: docker_installation
+
+- name: Clone repository and run Docker container
+  hosts: all
+  become: yes
+  tasks:
+    - name: Clone repository
+      git:
+        repo: https://github.com/danpg94/space_missions.git
+        dest: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
+      tags: clone_repo
+
+    - name: Change to project directory
+      shell: cd /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+      args:
+        chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+      tags: configure_container
+
+    - name: Switch to "main" branch
+      shell: git checkout main
+      args:
+        chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+      tags: configure_container
+
+    - name: Change to Django directory
+      shell: cd /home/ElBetoso/repo/space_missions/django
+      args:
+        chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
+      tags: configure_container
+
+    - name: Build Docker container
+      shell: sudo docker build --build-arg ALLOWED_HOST_PARAM=20.106.215.197 . -t test/space_missions # Change IP to your virtual machine's IP and The route (test/space_missions) to your route
+      args:
+        chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
+      tags: configure_container
+
+    - name: Run Docker container
+      shell: sudo docker run --name=space_missions -d -p 80:80 test/space_missions # Change The route (test/space_missions) to your route
+      tags: configure_container

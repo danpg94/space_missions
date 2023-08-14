@@ -11,6 +11,11 @@ html {
     font-size: 1.6rem;
     /* 1 rem = 10 px*/
     font-family: 'Krub', sans-serif;
+    /* Estilo del cursor personalizado (imagen de alien) */
+    cursor: url("/static/img/icons/cursor_defualt.png"), auto;
+    }
+    a {
+        cursor: url("/static/img/icons/cursor_hand.png"), auto;
   }
   
   header {
@@ -101,4 +106,9 @@ html {
   
   .container-contacts {
     max-width: 80rem;
+  }
+
+  .title {
+    font-size: 24px; 
+    font-weight: bold;
   }

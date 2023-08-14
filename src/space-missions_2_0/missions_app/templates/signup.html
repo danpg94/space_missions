@@ -1,16 +1,59 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Sign Up</h1>
-    {{error}}
-    <form action="/signup/" method="POST">
-        {% csrf_token %}
-        <label for="username">Usuario</label>
-        <input type="text" name="username" for="username" required>
-        <label for="password1">Contraseña</label>
-        <input type="password" name="password1" for="password1" required>
-        <label for="password2">Repite la contraseña</label>
-        <input type="password" name="password2" for="password2" required>
-        <button>Ready</button>
-    </form>
+
+<head>
+    {% load static %}
+    <link rel="preload" href="{% static 'css/credentials.css' %}" as="style">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/credentials.css' %}">
+</head>
+
+<video
+        src="https://assets.mixkit.co/videos/preview/mixkit-traveling-through-the-nebulae-of-space-30889-large.mp4"
+        autoplay="true" muted="true" loop="true">
+</video>
+
+<main>
+    <div class="container mb-5 mt-5 position-relative">
+        <div class="form-header p-4">
+            <h1 class="pt-3 mt-4 mb-3 fw-normal text-center">REGISTRAR VIAJERO</h1>
+        </div>
+        {{error}}
+        <div class="form-body p-3">
+            <div class="mb-3">
+                <form action="/signup/" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-5">
+                        <label for="username" class="form-label">Usuario</label>
+                        <input type="text" name="username" for="username" class="form-control" placeholder="Nombre de usuario" required>
+                    </div>
+                    
+                    <div class="mb-5">
+                        <label for="password1" class="form-label">Contraseña</label>
+                        <input type="password" name="password1" for="password1" class="form-control" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="password2" class="form-label">Repite la contraseña</label>
+                        <input type="password" name="password2" for="password2" class="form-control" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="container-fluid mt-5">
+                        <div class="row text-center mt-5">
+                            <div class="col mb-4">
+                                <button type="submit" class="btn btn-sumbit w-50">Registrarse</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Todos los derechos reservados, Space Missions</p>
+</footer>
 {% endblock %}

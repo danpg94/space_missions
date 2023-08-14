@@ -2,17 +2,34 @@
 
 {% block content %}
 
-    <main>
-        <h1>Misiones Espaciales</h1>
-        <ul>
-            {% for spaceMission in spaceMissions %}
-            <li>
-                <h3><snap style="color:deepskyblue">{{spaceMission.title}}</snap> by <snap style="color: greenyellow">{{spaceMission.user}}</snap></h3>
-                <p>{{spaceMission.description}}</p>
-            </li>
-            {% endfor %}
-        </ul>
+<head>
+    {% load static %}
+    <link rel="preload" href="{% static 'css/missionStyle.css' %}" as="style">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/missionStyle.css' %}">
+</head>
+
+<video
+        src="https://assets.mixkit.co/videos/preview/mixkit-flying-into-a-black-hole-in-the-starry-universe-31549-large.mp4"
+        autoplay="true" muted="true" loop="true">
+</video>
+
         
+    <main>
+        <div class="container">
+            <h1 class="h3 pt-3 mt-4 mb-3 fw-normal text-center title">Misiones Espaciales</h1>
+            <img src="{% static 'img/icons/rocket.png' %}" alt="Icono" class="icon">
+            <ul>
+                {% for spaceMission in spaceMissions %}
+                <hr class="mt-5 mb-5">
+                <li>
+                    <h3><snap style="color:deepskyblue">{{spaceMission.title}}</snap> by <snap style="color: greenyellow">{{spaceMission.user}}</snap></h3>
+                    <p>{{spaceMission.description}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <script src="{% static 'js/rocket_animation.js' %}"></script>
     </main>
 
     <footer>

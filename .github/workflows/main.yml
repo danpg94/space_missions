@@ -14,4 +14,4 @@ jobs:
       - name: Run Ansible playbook
         uses: dawidd6/action-ansible-playbook@v2.6.1
         with:
-          playbook: ${{ github.workspace }}/django/Ansible/clone-repo.yml
+          playbook: clone-repo.yml

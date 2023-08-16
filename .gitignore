@@ -1,3 +1,4 @@
 *.pyc
-django/env/*
+venv/*
 *.sqlite
+*.pem

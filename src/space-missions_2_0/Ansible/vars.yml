@@ -1,0 +1,5 @@
+---
+vm_repo_path: /home/ElBetoso/test/space_missions  # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
+vm_django_path: /home/ElBetoso/test/space_missions/src/space-missions_2_0 # Please replace here with the appropriate path on your Virtual Machine
+vm_ip_address: 20.106.215.197 # Change IP to your virtual machine's IP
+vm_docker_route: test/space_missions # Replace it with the name of the build you want to place

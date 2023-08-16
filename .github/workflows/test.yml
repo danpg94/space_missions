@@ -1,0 +1,25 @@
+name: Despliegue con Ansible
+
+on: [push] 
+
+jobs:
+  despliegue:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Obtener el repositorio
+      uses: actions/checkout@v2
+      
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+        
+    - name: Instalar Ansible
+      run: |
+        pip install ansible
+        ansible --version
+        ansible-galaxy collection install community.docker
+        
+    - name: Ejecutar Playbook de Ansible
+      run: ansible-playbook src/space-missions_2_0/Ansible/clone-repo.yml -e @vars.yml

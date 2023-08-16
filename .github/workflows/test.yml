@@ -22,4 +22,4 @@ jobs:
         ansible-galaxy collection install community.docker
         
     - name: Ejecutar Playbook de Ansible
-      run: ansible-playbook src/space-missions_2_0/Ansible/clone-repo.yml -e @vars.yml
+      run: ansible-playbook src/space-missions_2_0/Ansible/clone-repo.yml -e @src/space-missions_2_0/Ansible/vars.yml

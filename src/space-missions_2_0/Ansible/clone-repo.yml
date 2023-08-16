@@ -42,33 +42,38 @@
     - name: Clone repository
       git:
         repo: https://github.com/danpg94/space_missions.git
-        dest: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
+        dest: "{{vm_repo_path}}"
       tags: clone_repo
 
     - name: Change to project directory
-      shell: cd /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+      shell: cd "{{vm_repo_path}}" 
       args:
-        chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+        chdir: "{{vm_repo_path}}" 
       tags: configure_container
 
-    - name: Switch to "main" branch
+    - name: Switch to "main" branch # Change "main" to the name of the current main branch
       shell: git checkout main
       args:
-        chdir: /home/ElBetoso/repo/space_missions # Please replace here with the appropriate path on your Virtual Machine
+        chdir: "{{vm_repo_path}}"
       tags: configure_container
 
     - name: Change to Django directory
-      shell: cd /home/ElBetoso/repo/space_missions/django
+      shell: cd "{{vm_django_path}}"
       args:
-        chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
+        chdir: "{{vm_django_path}}" 
       tags: configure_container
 
     - name: Build Docker container
-      shell: sudo docker build --build-arg ALLOWED_HOST_PARAM=20.106.215.197 . -t test/space_missions # Change IP to your virtual machine's IP and The route (test/space_missions) to your route
+      shell: sudo docker build --build-arg ALLOWED_HOST_PARAM="{{vm_ip_address}}" . -t "{{vm_docker_route}}" 
       args:
-        chdir: /home/ElBetoso/repo/space_missions/django # Please replace here with the appropriate path on your Virtual Machine
+        chdir: "{{vm_django_path}}" 
+      tags: configure_container
+
+    - name: Remove Previous Container
+      shell: sudo docker rm --force space_missions
+      # ignore_errors: true  Ignore errors if the container doesn't exist yet
       tags: configure_container
 
     - name: Run Docker container
-      shell: sudo docker run --name=space_missions -d -p 80:80 test/space_missions # Change The route (test/space_missions) to your route
+      shell: sudo docker run --name=space_missions -d -p 80:80 "{{vm_docker_route}}" 
       tags: configure_container

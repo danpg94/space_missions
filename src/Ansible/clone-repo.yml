@@ -51,8 +51,8 @@
         chdir: "{{vm_repo_path}}" 
       tags: configure_container
 
-    - name: Switch to "main" branch # Change "main" to the name of the current main branch
-      shell: git checkout main
+    - name: Switch to "demo" branch # Change "main" to the name of the current main branch
+      shell: git checkout demo
       args:
         chdir: "{{vm_repo_path}}"
       tags: configure_container

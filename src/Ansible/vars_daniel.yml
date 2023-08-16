@@ -1,5 +1,5 @@
 ---
 vm_repo_path: /home/dan-azure-test/test/  # Please replace here with the appropriate path on your Virtual Machine where you want to clone the repository
-vm_django_path: /home/dan-azure-test/test/src/space-missions_2_0 # Please replace here with the appropriate path on your Virtual Machine
+vm_django_path: /home/dan-azure-test/test/src/ # Please replace here with the appropriate path on your Virtual Machine
 vm_ip_address: 20.150.222.135 # Change IP to your virtual machine's IP
 vm_docker_route: test/space_missions # Replace it with the name of the build you want to place

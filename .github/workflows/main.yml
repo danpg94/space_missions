@@ -1,0 +1,17 @@
+on:
+  label:
+    types:
+      - created
+  push:
+    branches:
+      - 42-devops-implement-a-basic-cicd-pipeline-using-a-tool-like-jenkins-or-gitlab-cicd
+  workflow_dispatch:
+  
+jobs:
+  run-playbooks:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run Ansible playbook
+        uses: dawidd6/action-ansible-playbook@v2.6.1
+        with:
+          playbook: ../../django/Ansible/clone-repo.yml

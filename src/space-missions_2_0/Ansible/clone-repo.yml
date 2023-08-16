@@ -77,3 +77,7 @@
     - name: Run Docker container
       shell: sudo docker run --name=space_missions -d -p 80:80 "{{vm_docker_route}}" 
       tags: configure_container
+
+    - name: Open Firewall
+      shell: sudo ufw allow 80
+      tags: configure_container
